@@ -32,6 +32,7 @@
     "react-copy-to-clipboard": "~5.1.0",
     "react-dom": "~18.3.1",
     "react-hot-toast": "~2.4.0",
+    "react-social-icons": "^6.18.0",
     "usehooks-ts": "~3.1.0",
     "viem": "2.21.54",
     "wagmi": "2.13.4",

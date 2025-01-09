@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { SocialIcon } from "react-social-icons";
 import { hardhat } from "viem/chains";
 import { CurrencyDollarIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { SwitchTheme } from "~~/components/SwitchTheme";
@@ -49,7 +50,12 @@ export const Footer = () => {
           <div className="flex justify-center items-center gap-2 text-sm w-full">
             <div className="text-center">
               <a href="https://t.me/AlexanderTGAIChat" target="_blank" rel="noreferrer" className="link">
-                <img src={isDarkTheme ? "/tg-white.svg" : "/tg-dark.svg"} alt="Telegram" className="h-6 w-6" />
+                <SocialIcon url="https://t.me/AlexanderTGAIChat" style={{ height: 24, width: 24 }} />
+              </a>
+            </div>
+            <div className="text-center">
+              <a href="https://x.com/AlexanderTGAI_" target="_blank" rel="noreferrer" className="link">
+                <SocialIcon url="https://x.com/AlexanderTGAI_" style={{ height: 24, width: 24 }} />
               </a>
             </div>
           </div>

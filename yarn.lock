@@ -655,7 +655,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.26.0":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.24.8, @babel/runtime@npm:^7.26.0":
   version: 7.26.0
   resolution: "@babel/runtime@npm:7.26.0"
   dependencies:
@@ -4141,6 +4141,7 @@ __metadata:
     react-copy-to-clipboard: ~5.1.0
     react-dom: ~18.3.1
     react-hot-toast: ~2.4.0
+    react-social-icons: ^6.18.0
     tailwindcss: ~3.4.11
     type-fest: ~4.26.1
     typescript: <5.6.0
@@ -15971,7 +15972,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:~18.3.1":
+"react-dom@npm:^18.3.1, react-dom@npm:~18.3.1":
   version: 18.3.1
   resolution: "react-dom@npm:18.3.1"
   dependencies:
@@ -16065,6 +16066,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-social-icons@npm:^6.18.0":
+  version: 6.18.0
+  resolution: "react-social-icons@npm:6.18.0"
+  dependencies:
+    "@babel/runtime": ^7.24.8
+    react: ^18.3.1
+    react-dom: ^18.3.1
+  peerDependencies:
+    react: 15.x.x || 16.x.x || 17.x.x || 18.x.x
+    react-dom: 15.x.x || 16.x.x || 17.x.x || 18.x.x
+  checksum: 8eac688c381f9265f07f56078109615ddd5c78101735f0a14e7c7989078200683f90661989482bff3c94686425c8dbfe71dd7d0ae7acf8d1f50b82070d3eeae6
+  languageName: node
+  linkType: hard
+
 "react-style-singleton@npm:^2.2.1, react-style-singleton@npm:^2.2.2":
   version: 2.2.3
   resolution: "react-style-singleton@npm:2.2.3"
@@ -16081,7 +16096,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:~18.3.1":
+"react@npm:^18.3.1, react@npm:~18.3.1":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:

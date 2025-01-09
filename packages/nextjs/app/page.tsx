@@ -179,9 +179,7 @@ const Home: NextPage = () => {
               </p>
               <p className="mb-5">-- Alexander the Great</p>
               <button className="btn btn-primary p-3 m-2  ">
-                <a href="https://creator.bid/agents/677eb480841c8e1f169f1cb3" target="_blank">
-                  $ALEXANDER
-                </a>
+                <a href="https://creator.bid/agents/677eb480841c8e1f169f1cb3">$ALEXANDER</a>
               </button>
               <button className="btn btn-primary p-3 m-2">
                 <a href="https://t.me/AlexanderTGAIChat" target="_blank">
