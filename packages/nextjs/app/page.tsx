@@ -145,16 +145,20 @@ const Home: NextPage = () => {
           <RoadmapSection section={sections[currentIndex]} />
 
           {/* Navigation Buttons at the Bottom */}
-          <div className="absolute bottom-5 left-0 right-0 flex justify-between mx-4">
+          <div className="absolute bottom-5 left-0 right-0 flex justify-center mx-4 p-4">
             {" "}
             {/* Positioned at the bottom */}
-            <button className="btn btn-secondary" onClick={handlePrevious} disabled={currentIndex === 0}>
-              <ArrowLeftIcon className="w-4 h-4" /> {/* Ensure you have imported ArrowLeftIcon */}
+            <button className="btn btn-secondary p-4 m-4" onClick={handlePrevious} disabled={currentIndex === 0}>
+              <ArrowLeftIcon className="w-4 h-4" />
               Previous
             </button>
-            <button className="btn btn-secondary" onClick={handleNext} disabled={currentIndex === sections.length - 1}>
+            <button
+              className="btn btn-secondary p-4 m-4"
+              onClick={handleNext}
+              disabled={currentIndex === sections.length - 1}
+            >
               Next
-              <ArrowRightIcon className="w-4 h-4" /> {/* Ensure you have imported ArrowRightIcon */}
+              <ArrowRightIcon className="w-4 h-4" />
             </button>
           </div>
         </div>
