@@ -94,9 +94,7 @@ export const Header = () => {
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">{/* <HeaderMenuLinks /> */}</ul>
       </div>
-      <div className="navbar-end flex-grow mr-4">
-        <RainbowKitCustomConnectButton />
-      </div>
+      <div className="navbar-end flex-grow mr-4">{/* <RainbowKitCustomConnectButton /> */}</div>
     </div>
   );
 };
