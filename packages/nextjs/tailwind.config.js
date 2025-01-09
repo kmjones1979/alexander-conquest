@@ -8,11 +8,11 @@ module.exports = {
     themes: [
       {
         light: {
-          primary: "#93BBFB",
+          primary: "#f5d04e",
           "primary-content": "#212638",
           secondary: "#DAE8FF",
           "secondary-content": "#212638",
-          accent: "#93BBFB",
+          accent: "#f5d04e",
           "accent-content": "#212638",
           neutral: "#212638",
           "neutral-content": "#ffffff",
@@ -32,17 +32,17 @@ module.exports = {
       },
       {
         dark: {
-          primary: "#212638",
-          "primary-content": "#F9FBFF",
+          primary: "#f5d04e",
+          "primary-content": "#1a1a1a",
           secondary: "#323f61",
           "secondary-content": "#F9FBFF",
-          accent: "#4969A6",
+          accent: "#f5d04e",
           "accent-content": "#F9FBFF",
-          neutral: "#F9FBFF",
-          "neutral-content": "#385183",
-          "base-100": "#385183",
+          neutral: "#2a2a2a",
+          "neutral-content": "#F9FBFF",
+          "base-100": "#212638",
           "base-200": "#2A3655",
-          "base-300": "#212638",
+          "base-300": "#1a1a1a",
           "base-content": "#F9FBFF",
           info: "#385183",
           success: "#34EEB6",
