@@ -77,7 +77,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden" id="roadmap">
+        <div className="relative overflow-hidden mt-10" id="roadmap">
           <div
             className="flex transition-transform duration-500"
             style={{

@@ -79,7 +79,7 @@ export const Header = () => {
                 setIsDrawerOpen(false);
               }}
             >
-              <HeaderMenuLinks />
+              {/* <HeaderMenuLinks /> */}
             </ul>
           )}
         </div>
@@ -92,9 +92,7 @@ export const Header = () => {
             <span className="text-xs">Crypto Conquest</span>
           </div>
         </Link>
-        <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">
-          <HeaderMenuLinks />
-        </ul>
+        <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">{/* <HeaderMenuLinks /> */}</ul>
       </div>
       <div className="navbar-end flex-grow mr-4">
         <RainbowKitCustomConnectButton />
