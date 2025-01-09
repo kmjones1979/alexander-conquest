@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 import { hardhat } from "viem/chains";
 import { CurrencyDollarIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { SwitchTheme } from "~~/components/SwitchTheme";
@@ -14,6 +15,8 @@ export const Footer = () => {
   const nativeCurrencyPrice = useGlobalState(state => state.nativeCurrency.price);
   const { targetNetwork } = useTargetNetwork();
   const isLocalNetwork = targetNetwork.id === hardhat.id;
+
+  const isDarkTheme = useTheme();
 
   return (
     <div className="min-h-0 py-5 px-1 mb-11 lg:mb-0">
@@ -46,7 +49,7 @@ export const Footer = () => {
           <div className="flex justify-center items-center gap-2 text-sm w-full">
             <div className="text-center">
               <a href="https://t.me/AlexanderTGAIChat" target="_blank" rel="noreferrer" className="link">
-                Join the Telegram
+                <img src={isDarkTheme ? "/tg-white.svg" : "/tg-dark.svg"} alt="Telegram" className="h-6 w-6" />
               </a>
             </div>
           </div>

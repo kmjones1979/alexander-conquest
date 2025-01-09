@@ -30,3 +30,12 @@ p {
 .btn.btn-ghost {
   @apply shadow-none;
 }
+
+@font-face {
+  font-family: "Kingston Roman";
+  src: url("/fonts/Kingston Roman.otf") format("opentype");
+}
+
+.font-kingston {
+  font-family: "Kingston Roman", sans-serif;
+}

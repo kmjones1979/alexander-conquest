@@ -16,8 +16,8 @@ type HeaderMenuLink = {
 
 export const menuLinks: HeaderMenuLink[] = [
   {
-    label: "Roadmap",
-    href: "/roadmap",
+    label: "Home",
+    href: "/",
   },
 ];
 
