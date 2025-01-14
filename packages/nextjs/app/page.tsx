@@ -182,9 +182,7 @@ const Home: NextPage = () => {
                 <a href="https://creator.bid/agents/677eb480841c8e1f169f1cb3">$ALEXANDER</a>
               </button>
               <button className="btn btn-primary p-3 m-2">
-                <a href="https://t.me/AlexanderTGAIChat" target="_blank">
-                  Join Telegram
-                </a>
+                <a href="https://t.me/AlexanderTGAIChat">Join Telegram</a>
               </button>
             </div>
           </div>

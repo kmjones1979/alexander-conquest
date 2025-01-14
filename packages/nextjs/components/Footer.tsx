@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { SocialIcon } from "react-social-icons";
@@ -18,6 +18,12 @@ export const Footer = () => {
   const isLocalNetwork = targetNetwork.id === hardhat.id;
 
   const isDarkTheme = useTheme();
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // This will only run on the client
+  }, []);
 
   return (
     <div className="min-h-0 py-5 px-1 mb-11 lg:mb-0">

@@ -1,11 +1,12 @@
 //SPDX-License-Identifier: MIT
-pragma solidity >=0.8.0 <0.9.0;
+pragma solidity ^0.8.27;
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-contract ConquestNFT is Ownable, ERC721 {
+contract Conquest is Ownable {
     
-    constructor() Ownable(msg.sender) ERC721("Crypto Conquest", "CONQUEST") {}
+    constructor(address _owner) Ownable(_owner) {
+    }
 
     /**
      * Function to withdraw all ETH from the contract

@@ -24,10 +24,10 @@ const deployConquestNFT: DeployFunction = async function (hre: HardhatRuntimeEnv
 
   const owner = "0x007E483Cf6Df009Db5Ec571270b454764d954d95";
 
-  await deploy("ConquestNFT", {
+  await deploy("Conquest", {
     from: deployer,
     // Contract constructor arguments
-    args: [],
+    args: [owner],
     log: true,
     // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
     // automatically mining the contract deployment transaction. There is no effect on live networks.
@@ -35,12 +35,11 @@ const deployConquestNFT: DeployFunction = async function (hre: HardhatRuntimeEnv
   });
 
   // Get the deployed contract to interact with it after deploying.
-  const ConquestNFT = await hre.ethers.getContract<Contract>("ConquestNFT", deployer);
-  ConquestNFT.transferOwnership(owner);
+  const Conquest = await hre.ethers.getContract<Contract>("Conquest", deployer);
 };
 
 export default deployConquestNFT;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
 // e.g. yarn deploy --tags ConquestNFT
-deployConquestNFT.tags = ["ConquestNFT"];
+deployConquestNFT.tags = ["Conquest"];

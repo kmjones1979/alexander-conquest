@@ -79,7 +79,7 @@ export const Header = () => {
                 setIsDrawerOpen(false);
               }}
             >
-              {/* <HeaderMenuLinks /> */}
+              <HeaderMenuLinks />
             </ul>
           )}
         </div>
