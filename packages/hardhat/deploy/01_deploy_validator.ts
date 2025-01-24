@@ -15,11 +15,13 @@ const deployValidator: DeployFunction = async function (hre: HardhatRuntimeEnvir
   const conquestAddress = await conquest.getAddress();
 
   const owner = "0x007e483cf6df009db5ec571270b454764d954d95";
+  const functionsRouterAddress = "0xb83E47C2bC239B3bf370bc41e1459A34b41238D0"; // Functions Router address for sepolia
+  const donId = "0x66756e2d657468657265756d2d7365706f6c69612d3100000000000000000000"; // DON ID for sepolia
 
   console.log("Deploying Validator...");
   await deploy("Validator", {
     from: deployer,
-    args: [owner, conquestAddress],
+    args: [owner, conquestAddress, functionsRouterAddress, donId],
     log: true,
     autoMine: true,
   });

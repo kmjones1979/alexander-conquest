@@ -32,10 +32,10 @@ contract Validator is FunctionsClient, Ownable {
   event MissionValidated(bytes32 requestId, uint8 missionIndex, uint256 isValid, bool success, address account);
   event Withdraw(uint256 amount);
 
-  constructor(address _owner, address _conquestAddress ) Ownable(_owner) FunctionsClient(0xb83E47C2bC239B3bf370bc41e1459A34b41238D0) {
+  constructor(address _owner, address _conquestAddress, address _functionsRouterAddress, bytes32 _donId) Ownable(_owner) FunctionsClient(_functionsRouterAddress) {
     conquest = Conquest(payable(_conquestAddress));
-    functionsRouterAddress = 0xb83E47C2bC239B3bf370bc41e1459A34b41238D0;
-    donId = 0x66756e2d657468657265756d2d7365706f6c69612d3100000000000000000000;
+    functionsRouterAddress = _functionsRouterAddress;
+    donId = _donId;
     emit ConquestAddressSet(_conquestAddress);
     emit FunctionsRouterAddressSet(functionsRouterAddress);
     emit DonIdSet(donId);
