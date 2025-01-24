@@ -3,12 +3,16 @@ import { DeployFunction } from "hardhat-deploy/types";
 import { Contract } from "ethers";
 
 /**
- * Deploys a contract named "ConquestNFT" using the deployer account and
+ * MOCK Alexander contract for testing purposes. Remove in production.
+ */
+
+/**
+ * Deploys a contract named "Alexander" using the deployer account and
  * constructor arguments set to the deployer address
  *
  * @param hre HardhatRuntimeEnvironment object.
  */
-const deployConquestNFT: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+const deployAlexander: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   /*
     On localhost, the deployer account is the one that comes with Hardhat, which is already funded.
 
@@ -24,7 +28,7 @@ const deployConquestNFT: DeployFunction = async function (hre: HardhatRuntimeEnv
 
   const owner = "0x007E483Cf6Df009Db5Ec571270b454764d954d95";
 
-  await deploy("Conquest", {
+  await deploy("Alexander", {
     from: deployer,
     // Contract constructor arguments
     args: [owner],
@@ -35,11 +39,11 @@ const deployConquestNFT: DeployFunction = async function (hre: HardhatRuntimeEnv
   });
 
   // Get the deployed contract to interact with it after deploying.
-  const Conquest = await hre.ethers.getContract<Contract>("Conquest", deployer);
+  const Alexander = await hre.ethers.getContract<Contract>("Alexander", deployer);
 };
 
-export default deployConquestNFT;
+export default deployAlexander;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
-// e.g. yarn deploy --tags ConquestNFT
-deployConquestNFT.tags = ["Conquest"];
+// e.g. yarn deploy --tags Alexander
+deployAlexander.tags = ["Alexander"];
