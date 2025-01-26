@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     Alexander: {
-      address: "0x9A676e781A523b5d0C0e43731313A708CB607508",
+      address: "0xc6e7DF5E7b4f2A278906862b61205850344D4e7d",
       abi: [
         {
           inputs: [
@@ -419,7 +419,7 @@ const deployedContracts = {
       },
     },
     Conquest: {
-      address: "0x0B306BF915C4d645ff596e518fAf3F9669b97016",
+      address: "0x59b670e9fA9D0A427751Af201D676719a970857b",
       abi: [
         {
           inputs: [
@@ -639,6 +639,13 @@ const deployedContracts = {
           type: "function",
         },
         {
+          inputs: [],
+          name: "withdrawETH",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
           stateMutability: "payable",
           type: "receive",
         },
@@ -650,7 +657,7 @@ const deployedContracts = {
       },
     },
     Validator: {
-      address: "0x959922bE3CAee4b8Cd9a407cc3ac1C251C2007B1",
+      address: "0x4ed7c70F96B99c776995fB64377f0d4aB3B0e1C1",
       abi: [
         {
           inputs: [

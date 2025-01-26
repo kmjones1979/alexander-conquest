@@ -20,8 +20,11 @@ contract Conquest is Ownable, ReentrancyGuard {
     event Staked(address indexed user, uint256 amount);
     event Unstaked(address indexed user, uint256 amount);
     event Withdrawn(address indexed user, uint256 amount);
+    event WithdrawnETH(address indexed user, uint256 amount);
 
     constructor(address _owner, address _alexanderToken) Ownable(_owner) {
+        require(_owner != address(0), "Zero owner address");
+        require(_alexanderToken != address(0), "Zero token address");
         alexanderToken = IERC20(_alexanderToken);
     }
 
@@ -59,13 +62,24 @@ contract Conquest is Ownable, ReentrancyGuard {
      */
     function withdraw() external nonReentrant {
         Stake storage userStake = stakes[msg.sender];
-        require(userStake.amount == 0, "Unstake first");
-        require(block.timestamp >= userStake.stakedAt + TWO_WEEKS, "Cooldown period not over");
-
         uint256 amount = userStake.amount;
+        require(amount == 0, "Unstake first"); 
+        require(block.timestamp >= userStake.stakedAt + TWO_WEEKS, "Cooldown period not over");
+        
         require(alexanderToken.transfer(msg.sender, amount), "Transfer failed");
-
+        
         emit Withdrawn(msg.sender, amount);
+    }
+
+    /**
+     * Function to withdraw ETH from the contract
+     */
+    function withdrawETH() external onlyOwner {
+        uint256 balance = address(this).balance;
+        require(balance > 0, "No ETH to withdraw");
+        (bool success,) = msg.sender.call{value: balance}("");
+        require(success, "ETH transfer failed");
+        emit WithdrawnETH(msg.sender, balance);
     }
 
     /**
